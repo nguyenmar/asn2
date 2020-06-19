@@ -4,18 +4,22 @@
     <head>
         <meta charset = "utf-8">
         <title>Form</title>
-       
+        <link rel="stylesheet" href="./stylesheets/formStyle.css">
         
-
     </head>
 
     <body>
-        <h1>Users</h1>
+        <h1>Join the Database!</h1>
    
-    <form class="" action="/adduser" method="post">
+    <form class="form1" action="/adduser" method="post">
         <input type = "text" name = "uname" value = "" placeholder = "Username"> <br>
+        <input type = "text" name = "fname" value = "" placeholder = "Name"> <br>
         <input type = "number" name = "age" value = "" placeholder="Age"> <br>
+        <input type = "number" name = "size" value = "" placeholder="Size"> <br>
+        <input type = "number" name = "height" value = "" placeholder="Height"> <br>
+
         <input type = "submit" name = "sub" value = "SERVER"> <br>
+        <button id = "button" type = "button" name = "add">ADD</button>
         <button id = "button" type = "button" name = "add">ADD</button>
     </form>
     <script type = "text/javascript" src="./script.js"></script>

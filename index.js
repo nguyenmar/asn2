@@ -27,6 +27,11 @@ app.get('/database',(req,res) => {
   
 });
 
+app.get('/add', (req, res) => {
+  console.log("adding customer");
+  res.render('pages/adduser')
+});
+
 app.post('/adduser', (req, res)=>{
   console.log("post request for /adduser");
   var uname = req.body.uname;
