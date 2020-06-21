@@ -8,12 +8,13 @@
 
 <link href="/../stylesheets/formStyle.css" rel="stylesheet">
 <div class="container">
-<h2>Database Results</h2>
+<h1>SHOE RESALE</h1>
+<h2><a class="user" href="../database/add">CLICK HERE TO MAKE A SALES POST</a> </h2>
 
 
 <table>
 <tr>
-  <th>Index</th>
+  <th>More Info</th>
   <th>Name</th>
   <th>Location</th>
   <th>Shoe Type</th>
@@ -22,12 +23,12 @@
   <th>Size</th>
   <th>Colour</th>
   <th>Price</th>
-  <th>User ID</th>
+  <th>Phone Number</th>
   <th>Modify</th>
 </tr>
 <% for(var i = 0; i < rows.length; i++) { %>
   <tr>
-      <td><%=(i+1)%></td>
+      <td><a class="user" href="../database/user/<%=rows[i].uid%>"><%=(i+1)%></a></td>
       <td><%=rows[i].fname%></td>
       <td><%=rows[i].location%></td>
       <td>
@@ -44,11 +45,11 @@
           SANDALS
         <% } %>
       </td>
-      <td><%=rows[i].condition%></td>
+      <td><%=rows[i].condition%>/10</td>
       <td><%=rows[i].sizetype%></td>
       <td><%=rows[i].size%></td>
       <td><%=rows[i].colour%></td>
-      <td><%=rows[i].price%></td>
+      <td>$<%=rows[i].price%></td>
       <td><%=rows[i].uid%></td>
       <td>
       <a class="edit" href="../database/edit/<%=rows[i].uid%>">Edit</a>
@@ -60,8 +61,7 @@
   <% } %>
 
 </table>
-
-<a class="add" href="../database/add/">ADD</a>
+<h2><a class="user" href="../database/display">VIEW VISUAL DISPLAY</a> </h2>
 </div>
 
 </body>

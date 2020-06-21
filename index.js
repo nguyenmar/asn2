@@ -5,9 +5,8 @@ const PORT = process.env.PORT || 5000
 const { Pool } = require('pg');
 var pool;
 pool = new Pool({
-  connectionString: process.env.DATABASE_URL
-  //'postgres://postgres:marian@localhost/users'
-  
+  connectionString: //'postgres://postgres:marian@localhost/users'
+  process.env.DATABASE_URL
 })
 
 var app = express();
@@ -59,7 +58,7 @@ app.post('/database/add', (req, res) => {
     if(error)
       res.end(error);
     console.log("saved!");  
-    res.redirect('/database');
+    res.redirect('/database/display');
   })
 });
 
@@ -91,7 +90,7 @@ app.post('/database/edit/:id', (req, res) => {
       if (error) {
           console.log("Error happening", error);
       }
-      res.redirect('/database');
+      res.redirect('/database/display');
   });
 
 });
@@ -103,24 +102,10 @@ app.get('/database/delete/:id', (req, res) => {
   pool.query(deleteUsers, [uid], (error, result) => {
     if(error)
       console.log("error");
-    res.redirect('/database');
+    res.redirect('/database/display');
   });
 });
 
-
-app.post('/adduser', (req, res)=>{
-  console.log("post request for /adduser");
-  var uname = req.body.uname;
-  var age = req.body.age;
-  res.send(`username: ${uname}, age: ${age}`);
-});
-
-app.get('/users/:id', (req, res)=> {
-  var uid = req.params.id;
-  console.log(req.params.id);
-  // search the database using the uid
-  res.send("got it!");
-})
 
 app.get('/database/user/:id', (req, res) => {
   console.log("start user id");
