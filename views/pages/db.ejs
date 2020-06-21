@@ -6,17 +6,62 @@
 
 <body>
 
-<% include ../partials/nav.ejs %>
-
+<link href="/../stylesheets/formStyle.css" rel="stylesheet">
 <div class="container">
 <h2>Database Results</h2>
 
-<ul>
-    <% rows.forEach(function(r) { %>
-        <li><%= r.uid %>, <%= r.age %></li>
-    <% }); %>
-</ul>
 
+<table>
+<tr>
+  <th>Index</th>
+  <th>Name</th>
+  <th>Location</th>
+  <th>Shoe Type</th>
+  <th>Condition</th>
+  <th>Size Type</th>
+  <th>Size</th>
+  <th>Colour</th>
+  <th>Price</th>
+  <th>User ID</th>
+  <th>Modify</th>
+</tr>
+<% for(var i = 0; i < rows.length; i++) { %>
+  <tr>
+      <td><%=(i+1)%></td>
+      <td><%=rows[i].fname%></td>
+      <td><%=rows[i].location%></td>
+      <td>
+        <% if(rows[i].shoetype == '1'){ %>
+          CASUALS
+        <% } %>
+        <% if(rows[i].shoetype == '2'){ %>
+          RUNNERS
+        <% } %>
+        <% if(rows[i].shoetype == '3'){ %>
+          HEELS
+        <% } %>
+        <% if(rows[i].shoetype == '4'){ %>
+          SANDALS
+        <% } %>
+      </td>
+      <td><%=rows[i].condition%></td>
+      <td><%=rows[i].sizetype%></td>
+      <td><%=rows[i].size%></td>
+      <td><%=rows[i].colour%></td>
+      <td><%=rows[i].price%></td>
+      <td><%=rows[i].uid%></td>
+      <td>
+      <a class="edit" href="../database/edit/<%=rows[i].uid%>">Edit</a>
+      or
+      <a class="delete" href="../database/delete/<%=rows[i].uid%>">Delete</a>
+      </td>
+     
+  </tr>
+  <% } %>
+
+</table>
+
+<a class="add" href="../database/add/">ADD</a>
 </div>
 
 </body>

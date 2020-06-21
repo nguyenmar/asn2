@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+<link href="/../stylesheets/formStyle.css" rel="stylesheet">
+
+<h1 class = "DAheader">Used Shoes for Sale</h1>
+<h2 class = "DAheader2">A place where you can sell the shoes you don't wear anymore!</h2>
+
+<div class="DAcontainer">
+
+  <% for(var i = 0; i < rows.length; i++) { %>
+    
+    <% if(rows[i].shoetype == '2'){ %>
+      <div class = "display" style="background: <%=rows[i].colour%>">
+        <img src="https://i.pinimg.com/originals/5b/5a/96/5b5a9627a120abbd3c08f757df1d51c2.png" alt="sometext" />
+        <br>Seller: <%=rows[i].fname%>
+          <br>Location: <%=rows[i].location%>
+        <br>Price: $<%=rows[i].price%>
+        <br><a class="user" href="../database/user/<%=rows[i].uid%>">More Info</a>
+        </p>
+      </div> 
+    <% } %>
+      
+      <% if(rows[i].shoetype == '4'){ %>
+        <div class = "display" style="background: <%=rows[i].colour%>">
+          <img src="https://img2.pngio.com/casual-wear-fashion-flip-flops-men-sandals-slippers-summer-icon-flip-flop-outline-png-512_512.png" alt="sometext" />
+          <br>Seller: <%=rows[i].fname%>
+          <br>Location: <%=rows[i].location%>
+          <br>Price: $<%=rows[i].price%>
+          
+          </p>
+        </div>
+      <% } %>
+
+      <% if(rows[i].shoetype == '3'){ %>
+        <div class = "display" style="background: <%=rows[i].colour%>">
+          <img src="https://library.kissclipart.com/20180916/ete/kissclipart-stiletto-heel-clipart-high-heeled-shoe-stiletto-he-1d86b4a07efd8d32.png"  alt="sometext" />
+          <br>Seller: <%=rows[i].fname%>
+          <br>Location: <%=rows[i].location%>
+          <br>Price: $<%=rows[i].price%>
+          </p>
+        </div>
+      <% } %>
+
+      <% if(rows[i].shoetype == '1'){ %>
+        <div class = "display" style="background: <%=rows[i].colour%>">
+          <img src="https://i.dlpng.com/static/png/6361360_preview.png" alt="sometext" />
+          <br>Seller: <%=rows[i].fname%>
+          <br>Location: <%=rows[i].location%>
+          <br>Price: $<%=rows[i].price%>
+          </p>
+        </div>
+      <% } %>
+              
+          <% } %>
+
+</div>
+
+</body>
+</html>

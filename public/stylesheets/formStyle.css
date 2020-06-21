@@ -4,37 +4,153 @@ body {
     margin-right: auto;
     background-color: white;
     color: black;
-    text-align: center;
+    font-size: 10px;
     
 }
 
 h1 {
     margin-left: auto;
     margin-right: auto;
-    color: black;
+    color: pink;
     text-align: center;
-    width: 550px;
     padding-bottom: 1px;
     font-size: 30px;
-    font-family: monospace;
+    font-family: arial;
 }
  
 h2{
     margin-left: auto;
     margin-right: auto;
-    font-family: monospace;
-    font-size: 12px;
-    width: 250px;
+    font-size: 20px;
+    
 }
 
+.container1 {
+    
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid pink;
+    background-color: white;
+    width: 400px;
+    height: 690px;
+    margin-bottom: 10px;
 
-button {
-    font-weight: bold;
-    font-family: monospace;
-    background-color: white
-    border-radius:1px;
+  }
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: pink;
+    color: black;
+    border: 0.2px solid black;
+}
+
+.form1 {
+    padding: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: black;
+    
+}
+
+tr {
+    text-align: center;
+    background-color: pink;
     color:black;
-    font-size: 12px;
+    
 }
 
- 
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+td {
+    width: 100px;
+    height: 15px;
+    border: 0.05px solid black;
+}
+
+th {
+    width: 100px;
+    height: 15px;
+    text-align: center;
+    border: 0.05px solid black;
+}
+
+label {
+    text-align: left;
+    padding: 1px;
+    background-color: white;
+    color:black;
+}
+
+/* Display all classes */
+
+.DAheader {
+    margin-left: auto;
+    margin-right: auto;
+    color: pink;
+    text-align: center;
+    width: 550px;
+    padding-bottom: 1px;
+    font-size: 30px;
+    font-family: arial;
+}
+.DAheader2 {
+    margin-left: auto;
+    margin-right: auto;
+    color: pink;
+    text-align: center;
+    width: 600px;
+    padding-bottom: 1px;
+    font-size: 20px;
+    font-family: arial;
+}
+
+.display{
+    background-color: pink;
+    display: inline-block;
+    vertical-align: bottom;
+    border: 0.05px solid black;
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.display img {
+    width: 99px;
+    height: 98px;
+}
+
+.DAcontainer {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid pink;
+    background-color: white;
+    width: 1200px;
+    height: 900px;
+}
+
+.displayUser{
+    position: center;
+    background-color: pink;
+    border: 0.05px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 300px;
+    font-size: 15px;
+}
+
+.displayUser img {
+    width: 299px;
+    height: 298px;
+}

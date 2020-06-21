@@ -7,24 +7,21 @@
 <body>
 
 
-
-
-
-<h1>SHOES RESALE</h1>
+<div class="container">
+<h1>Edit your Information</h1>
 </div>
 
-<div class="container1">
-<form class="form1" action="/database/add" method="post">
-    <h2>Create Sale Post:</h2>
-    <p>Please fill in this form about you and your shoes</p>
+<form class="form1" action="/database/edit/<%=rows[0].uid%>" method="post">
+
+
     <label><b>First Name</b></label><br>
-    <input type = "text" name = "fname" value = "" placeholder = " First Name"> <br>
+    <input type = "text" name = "fname" value = "<%=rows[0].fname%>" placeholder = " First Name"> <br>
     <label><b>Location</b></label><br>
-    <input type = "text" name = "location" value = "" placeholder="Where are you from?"> <br>
+    <input type = "text" name = "location" value = "<%=rows[0].location%>" placeholder="Where are you from?"> <br>
     <label><b>Shoe Type</b></label><br>
 
   
-    <input type="number" name = "shoetype" list="shoetype" placeholder="Select Shoe Type">
+    <input type="number" name = "shoetype" list="shoetype"value = "<%=rows[0].shoetype%>" placeholder="Select Shoe Type">
     <datalist id="shoetype">
       <option value="1">CASUALS</option>
       <option value="2">RUNNERS</option>
@@ -34,10 +31,10 @@
     <br>
 
     <label><b>Condition</b></label><br>
-    <input type = "number" name = "condition" value = "" placeholder="Condition of Shoes Out of 10"> <br>
+    <input type = "number" name = "condition" value = "<%=rows[0].condition%>" placeholder="Condition of Shoes Out of 10"> <br>
 
     <label><b>Size Type</b></label><br>
-    <input type="text" name = "sizetype" list="sizetype" placeholder="Select Shoe Type">
+    <input type="text" name = "sizetype" list="sizetype" value = "<%=rows[0].sizetype%>" placeholder="Select Shoe Type">
     <datalist id="sizetype">
       <option value="MENS"></option>
       <option value="WOMENS"></option>
@@ -46,9 +43,9 @@
     <br>
 
     <label><b>Size</b></label><br>
-    <input type = "number" name = "size" value = "" placeholder="Size"> <br>
+    <input type = "number" name = "size" value = "<%=rows[0].size%>" placeholder="Size"> <br>
     <label><b>Colour</b></label><br>
-    <input type="text" name = "colour" list="colourlist" placeholder="Colour of Shoes">
+    <input type="text" name = "colour" list="colourlist" value = "<%=rows[0].colour%>" placeholder="Colour of Shoes">
     <datalist id="colourlist">
       <option value="RED">
       <option value="ORANGE">
@@ -63,17 +60,18 @@
     </datalist>
     <br>
     <label><b>Price</b></label><br>
-    <input type = "number" name = "price" value = "" placeholder="Price"> <br>
+    <input type = "number" name = "price" value = "<%=rows[0].price%>" placeholder="Price"> <br>
     <br>
 
     <label><b>Membership ID</b></label><br>
-    <input type = "text" name = "uid" value = "" placeholder="Enter user ID"> <br>
+    <input type = "text" name = "uid" value = "<%=rows[0].uid%>" placeholder="Enter user ID"> <br>
     <br>
 
-    <input type = "submit" name = "sub" value = "POST"> <br>
+  <input type = "submit" name = "sub" value = "SAVE"><br>
+
 
 </form>
-</div>
+
 
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+</head>
+
+<body>
+
+
+<div class="container">
+<h1>More Information</h1>
+</div>
+
+
+<% if(rows[0].shoetype == '2'){ %>
+    <div class = "displayUser" style="background: <%=rows[0].colour%>">
+      <img src="https://i.pinimg.com/originals/5b/5a/96/5b5a9627a120abbd3c08f757df1d51c2.png" alt="sometext" />
+      <p><br>Seller: <%=rows[0].fname%>
+      <br>Location: <%=rows[0].location%>
+      <br>Price: $<%=rows[0].price%>
+      <br>Condition: <%=rows[0].condition%>/10
+      <br>Size Type: <%=rows[0].sizetype%>
+      <br>Size: <%=rows[0].size%>
+      <br>Phone Number: <%=rows[0].uid%>
+      </p>
+    </div> 
+  <% } %>
+    
+    <% if(rows[0].shoetype == '4'){ %>
+      <div class = "display" style="background: <%=rows[0].colour%>">
+        <img src="https://img2.pngio.com/casual-wear-fashion-flip-flops-men-sandals-slippers-summer-icon-flip-flop-outline-png-512_512.png" alt="sometext" />
+        <br>Seller: <%=rows[0].fname%>
+        <br>Location: <%=rows[0].location%>
+        <br>Price: $<%=rows[0].price%>
+        
+        </p>
+      </div>
+    <% } %>
+
+    <% if(rows[0].shoetype == '3'){ %>
+      <div class = "display" style="background: <%=rows[0].colour%>">
+        <img src="https://library.kissclipart.com/20180916/ete/kissclipart-stiletto-heel-clipart-high-heeled-shoe-stiletto-he-1d86b4a07efd8d32.png"  alt="sometext" />
+        <br>Seller: <%=rows[0].fname%>
+        <br>Location: <%=rows[0].location%>
+        <br>Price: $<%=rows[0].price%>
+        </p>
+      </div>
+    <% } %>
+
+    <% if(rows[0].shoetype == '1'){ %>
+      <div class = "display" style="background: <%=rows[0].colour%>">
+        <img src="https://i.dlpng.com/static/png/6361360_preview.png" alt="sometext" />
+        <br>Seller: <%=rows[0].fname%>
+        <br>Location: <%=rows[0].location%>
+        <br>Price: $<%=rows[0].price%>
+        </p>
+      </div>
+    <% } %>
+            
+
+
+</body>
+</html>

@@ -17,7 +17,7 @@ arr.sort(asc);
 
 // for (item in arr) {
 //  console.log(arr[item]);    
-// }
+// 
 
 var x = arr.every(function(val){
     return val > 7;
