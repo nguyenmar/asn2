@@ -5,8 +5,8 @@ const PORT = process.env.PORT || 5000
 const { Pool } = require('pg');
 var pool;
 pool = new Pool({
-  connectionString: //'postgres://postgres:marian@localhost/users'
-  process.env.DATABASE_URL
+  connectionString: 'postgres://postgres:marian@localhost/users'
+  //process.env.DATABASE_URL
 })
 
 var app = express();
@@ -26,7 +26,6 @@ app.get('/database',(req,res) => {
       res.end(error);
     var results = {'rows':result.rows}
     res.render('pages/db', results);
-    res.render('pages/displayall', results);
   })
   
 });
@@ -52,7 +51,7 @@ app.get('/database/add', (req, res) => {
 app.post('/database/add', (req, res) => {
   console.log("saving to database");
   var data = [req.body.fname, req.body.location, req.body.shoetype, req.body.condition, req.body.sizetype, req.body.size, req.body.colour, req.body.price, req.body.uid];
-  var insertUsers = `INSERT INTO person(fname, location, shoetype, condition, sizetype, size, colour, price, uid) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)`;
+  var insertUsers = `INSERT INTO person (fname, location, shoetype, condition, sizetype, size, colour, price, uid) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)`;
   console.log("start of insert");
   pool.query(insertUsers, data, (error, result) => {
     if(error)
