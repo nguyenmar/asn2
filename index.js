@@ -5,8 +5,9 @@ const PORT = process.env.PORT || 5000
 const { Pool } = require('pg');
 var pool;
 pool = new Pool({
-  connectionString: 'postgres://postgres:marian@localhost/users'
-  //process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL
+  //'postgres://postgres:marian@localhost/users'
+  
 })
 
 var app = express();
